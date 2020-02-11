@@ -52,7 +52,8 @@ spec:
       args:
         - |
           set -e -o pipefail
-          echo "00 pfq"
+          echo "01 pfq"
+          echo $API_KEY
           TOOLCHAIN_ID=$(jq -r '.toolchain_guid' /cd-config/toolchain.json)
           TOOLCHAIN_REGION=$(jq -r '.region_id' /cd-config/toolchain.json | awk -F: '{print $3}')
           ##########################################################################
